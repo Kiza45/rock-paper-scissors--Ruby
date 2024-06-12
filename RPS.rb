@@ -3,49 +3,55 @@ name = gets.chomp
 pick = rand(3)
 options = ["rock", "paper", "scissors"]
 compPick = options[pick]
-puts "Hi #{name}!, lets play rock paper scissors, Pick which one now"
-end = False
-while (end == False)
+puts "Hi #{name}! I'm Ruby, lets play rock paper scissors, Pick one now(r/p/s)"
+finish = false
+while (finish == false)
   userPick = gets.chomp
-  print(compPick)
+  puts "My pick: #{compPick}"
 
   if (userPick == compPick)
-    put("try again")
+    put("Draw")
+    finish = true
 
+
+  elsif userPick == "r" && compPick == "paper"
+    puts "Your pick: rock"
+    print "You Lose"
+    finish = true
+
+
+  elsif userPick == "r" && compPick == "scissors"
+    puts "Your pick: rock"
+    print "You Win"
+    finish = true
+
+
+  elsif userPick == "p" && compPick == "scissors"
+    puts "Your pick: paper"
+    print "You Lose"
+    finish = true
+
+
+  elsif userPick == "p" && compPick == "rock"
+    puts "Your pick: paper"
+    print "You Win"
+    finish = true
+
+
+  elsif userPick == "s" && compPick == "rock"
+    puts "Your pick: scissor"
+    print "You Lose"
+    finish = true
+
+
+  elsif userPick == "s" && compPick == "paper"
+    puts "Your pick: scissor"
+    print "You Win"
+    finish = true
+
+
+  else
+    print "that wasn't an option! Please try again"
+    finish = true
   end
-
-  elsif userPick == "rock" && compPick = "paper"
-
-  end
-
-  elsif userPick == "rock" && compPick = "scissors"
-
-  end
-
-  elsif userPick == "paper" && compPick = "scissors"
-
-  end
-
-elsif userPick == "rock" && compPick = "scissors"
-
-end
-
-elsif compPick == "rock" && userPick = "paper"
-
-end
-
-elsif compPick == "rock" && userPick = "scissors"
-
-end
-
-elsif compPick == "paper" && userPick = "scissors"
-
-end
-
-elsif compPick == "rock" && userPick = "scissors"
-
-end
-
-else
-  print "that wasn't an option! Please try again"
 end
