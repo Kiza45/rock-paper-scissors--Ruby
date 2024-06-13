@@ -1,7 +1,12 @@
+=begin
+  This is a basic game of Rock, Paper, Scissors that runs in the temrinal.
+  The Main goal behind this project was to try out Ruby and see how it is to work with
+=end
+
 puts "enter your name"
 name = gets.chomp
 
-
+# winnerCheck takes user input, randomises the computers choice and declares if the player has won, lost or drawn.
 def winnerCheck
   options = ["rock", "paper", "scissors"]
   userPick = gets.chomp
@@ -54,6 +59,7 @@ def winnerCheck
   end
 end
 
+# replay calls the game logic again without asking for the player name at the start
 def replay
   puts "Pick again (r/p/s)"
   finish = false
@@ -63,6 +69,7 @@ def replay
   end
 end
 
+# playAgain gives the choice to quit or play ahain and call the game logic
 def playAgain
   puts "Play again?(y/n)"
   response = gets.chomp
@@ -75,6 +82,7 @@ def playAgain
   end
 end
 
+# intro script and first game
 puts "Hi #{name}! I'm Ruby, lets play rock paper scissors, Pick one now(r/p/s)"
 finish = false
 while (finish == false)
