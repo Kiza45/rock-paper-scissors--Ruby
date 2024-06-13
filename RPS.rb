@@ -12,48 +12,71 @@ def winnerCheck
   userPick = gets.chomp
   pick = rand(3)
   compPick = options[pick]
-  puts "My pick: #{compPick}"
 
-  if (userPick == compPick)
-    put("Draw")
-    finish = true
 
-  elsif userPick == "r" && compPick == "paper"
+  if userPick == "r" && compPick == "rock"
     puts "Your pick: rock"
-    puts "You Lose"
+    puts "My pick: #{compPick}"
+    puts("Draw")
     finish = true
+  end
 
-
-  elsif userPick == "r" && compPick == "scissors"
+  if userPick == "r" && compPick == "paper"
     puts "Your pick: rock"
-    puts "You Win"
-    finish = true
-
-
-  elsif userPick == "p" && compPick == "scissors"
-    puts "Your pick: paper"
+    puts "My pick: #{compPick}"
     puts "You Lose"
     finish = true
+  end
 
-
-  elsif userPick == "p" && compPick == "rock"
-    puts "Your pick: paper"
+  if userPick == "r" && compPick == "scissors"
+    puts "Your pick: rock"
+    puts "My pick: #{compPick}"
     puts "You Win"
     finish = true
+  end
 
+  if userPick == "p" && compPick == "paper"
+    puts "Your pick: paper"
+    puts "My pick: #{compPick}"
+    puts("Draw")
+    finish = true
+  end
 
-  elsif userPick == "s" && compPick == "rock"
-    puts "Your pick: scissor"
+  if userPick == "p" && compPick == "scissors"
+    puts "Your pick: paper"
+    puts "My pick: #{compPick}"
     puts "You Lose"
     finish = true
+  end
 
-
-  elsif userPick == "s" && compPick == "paper"
-    puts "Your pick: scissor"
+  if userPick == "p" && compPick == "rock"
+    puts "Your pick: paper"
+    puts "My pick: #{compPick}"
     puts "You Win"
     finish = true
+  end
 
-  else
+  if userPick == "s" && compPick == "scissors"
+    puts "Your pick: scissors"
+    puts "My pick: #{compPick}"
+    puts("Draw")
+    finish = true
+  end
+
+  if userPick == "s" && compPick == "rock"
+    puts "Your pick: scissor"
+    puts "My pick: #{compPick}"
+    puts "You Lose"
+    finish = true
+  end
+
+  if userPick == "s" && compPick == "paper"
+    puts "Your pick: scissor"
+    puts "My pick: #{compPick}"
+    puts "You Win"
+    finish = true
+  end
+  if !userPick == "r" or !userPick == "p" || !userPick == "s"
     puts "that wasn't an option! Please try again"
     finish = true
   end
