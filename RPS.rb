@@ -76,7 +76,7 @@ def winnerCheck
     puts "You Win"
     finish = true
   end
-  if !userPick == "r" or !userPick == "p" || !userPick == "s"
+  if userPick != "r" && userPick != "p" && userPick != "s"
     puts "that wasn't an option! Please try again"
     finish = true
   end
